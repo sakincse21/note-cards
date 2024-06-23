@@ -9,9 +9,11 @@ body{
     box-shadow: 5px 5px 20px gray;
     height: 100%;
     flex-wrap: wrap;
+    margin-top: 30px;
 
 }
 #new-note-container{
+    margin-top: 30px;;
     border: 2px solid black;
     border-radius: 16px;
     box-shadow: 5px 5px 20px gray;
@@ -23,5 +25,5 @@ body{
     border-top: 1px solid black;
 }
 .note{
-    margin: 5px 5px;
+//    margin: 5px 5px;
 }
