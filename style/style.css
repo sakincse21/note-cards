@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#all-notes-container{
+    border: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 5px 5px 20px gray;
+    height: 100%;
+
+}
+#new-note-container{
+    border: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 5px 5px 20px gray;
+    height: 100%;
+}
+#remove-note{
+    text-align: end;
+    padding: 5px;
+    border-top: 1px solid black;
+}
+.note{
+    margin: 5px 5px;
+}
