@@ -44,19 +44,18 @@
 document.getElementById('submit-button').addEventListener('click', function () {
     const date = new Date();
     const newDate = '' + date.getHours() + ':' + date.getMinutes() + ', ' + date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
-    const newTitle = document.getElementById('note-title').value + '';
-    const newText = document.getElementById('note-text').value + '';
-
-    const exampleNote = document.getElementById('example-note');
-    if (exampleNote != undefined) {
-        exampleNote.remove();
-    }
+    const newTitle = document.getElementById('note-title').value+'';
+    const newText = document.getElementById('note-text').value+'';
 
     if (newText == '' && newTitle == '') {
-        alert('add some text');
+        alert('Add some text');
     } else {
 
 
+        const exampleNote = document.getElementById('example-note');
+        if (exampleNote != undefined) {
+            exampleNote.remove();
+        }
 
         const cardHeaderDiv = document.createElement('div');
         cardHeaderDiv.className = 'card-header';
@@ -75,7 +74,7 @@ document.getElementById('submit-button').addEventListener('click', function () {
         removeDiv.innerText = 'Remove';
 
         const noteDiv = document.createElement('div');
-        noteDiv.className = 'card text-bg-dark mb-3 note';
+        noteDiv.className = 'card text-bg-dark mb-3 note m-auto';
         noteDiv.style = 'max-width: 18rem;';
         noteDiv.appendChild(cardHeaderDiv);
         noteDiv.appendChild(cardTitleH5);
@@ -84,6 +83,9 @@ document.getElementById('submit-button').addEventListener('click', function () {
 
         const allNotesContainer = document.getElementById('all-notes-container');
         allNotesContainer.appendChild(noteDiv);
+
+        document.getElementById('note-title').value = '';
+        document.getElementById('note-text').value = '';
     }
 });
 
